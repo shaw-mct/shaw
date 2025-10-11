@@ -34,3 +34,14 @@ collections:
         fields:
           - { label: "Name", name: "name", widget: "string" }
           - { label: "Code", name: "code", widget: "color" }   # 🎨 color picker
+
+  # 🪄 Dummy section (no real use, just exists)
+  - name: "dummy_section"
+    label: "🪄 Dummy Section"
+    folder: "_dummy_section"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Useless Title", name: "useless_title", widget: "string", required: false }
+      - { label: "Useless Text", name: "useless_text", widget: "text", required: false }
+      - { label: "Completely Pointless Number", name: "useless_number", widget: "number", required: false }
