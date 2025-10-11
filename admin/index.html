@@ -13,6 +13,28 @@
 
 
 
+<style>
+/* Fix color picker clipping inside the editor widgets */
+.nc-colorControl {
+  z-index: 9999 !important;
+}
+
+.react-colorful {
+  z-index: 9999 !important;
+}
+
+.nc-widget,
+.nc-objectControl,
+.nc-widgetListItem {
+  overflow: visible !important;
+  width: auto !important;
+}
+
+/* Optional: make the color picker wider */
+.nc-colorControl input[type="color"] {
+  width: 100% !important;
+}
+</style>
 
 
   </head>
@@ -24,24 +46,6 @@
 
 
 
-<script>
-  // Register custom styles for the CMS editor
-  CMS.registerPreviewStyle(`
-    /* Make sure the color picker isn't clipped */
-    .nc-colorControl {
-      z-index: 2000 !important;
-    }
-
-    .nc-widget {
-      overflow: visible !important;
-    }
-
-    /* Ensure lists of objects (like colors) have enough space */
-    .nc-objectControl {
-      overflow: visible !important;
-    }
-  `, { raw: true });
-</script>
 
   </body>
 </html>
