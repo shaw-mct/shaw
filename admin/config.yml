@@ -10,30 +10,32 @@ public_folder: "/img"       # public URL path
 
 collections:
   - name: "products"
-    label: "Products"
-    folder: "_products"      # folder where product markdown files are stored
+    label: "المنتجات"             # This shows as the collection name in the sidebar
+    label_singular: "منتج جديد"   # This changes the "New Product" button text
+    folder: "_products"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "product" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Price", name: "price", widget: "number", value_type: "float" }
-      - { label: "Main Image", name: "image", widget: "image" }
-      - label: "Gallery Images"
+      - { label: "العنوان", name: "title", widget: "string" }
+      - { label: "السعر", name: "price", widget: "number", value_type: "float" }
+      - { label: "الصورة الرئيسية", name: "image", widget: "image" }
+      - label: "معرض الصور"
         name: "images"
         widget: "list"
-        field: { label: "Image", name: "image", widget: "image" }
-      - { label: "Description", name: "description", widget: "text" }
-      - label: "Sizes"
+        field: { label: "صورة", name: "image", widget: "image" }
+      - { label: "الوصف", name: "description", widget: "text" }
+      - label: "المقاسات"
         name: "sizes"
         widget: "list"
-        field: { label: "Size", name: "size", widget: "string" }
-      - label: "Colors"
+        field: { label: "مقاس", name: "size", widget: "string" }
+      - label: "الألوان"
         name: "colors"
         widget: "list"
         fields:
-          - { label: "Name", name: "name", widget: "string" }
-          - { label: "Code", name: "code", widget: "color" }   # 🎨 color picker
+          - { label: "الاسم", name: "name", widget: "string" }
+          - { label: "الرمز", name: "code", widget: "color" }
+
 
   # 🪄 Dummy section (no real use, just exists)
   - name: "dummy_section"
