@@ -12,6 +12,27 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hithismani/responsive-decap@main/dist/responsive.min.css"> <!-- Untested, but Minified -->
 
 
+
+
+<style>
+/* Ensure the color picker is fully visible */
+.nc-colorControl {
+  z-index: 1000 !important; /* Bring picker above other elements */
+}
+
+.nc-widget {
+  overflow: visible !important; /* Allow popup to expand */
+}
+
+/* Optional: adjust width of root container */
+#nc-root {
+  width: 100% !important;
+  max-width: none !important;
+}
+</style>
+
+
+
   </head>
   <body>
     <!-- Include the script that builds the page and powers Decap CMS -->
