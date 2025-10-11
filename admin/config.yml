@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: Bassel-Mohammed/shaw       # Your GitHub repo
+  repo: shaw-mct/shaw       # Your GitHub repo
   branch: main
   base_url: https://cms-oauth-proxy-two.vercel.app
 
