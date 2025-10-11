@@ -34,3 +34,6 @@ collections:
         fields:
           - { label: "Name", name: "name", widget: "string" }
           - { label: "Code", name: "code", widget: "color" }   # 🎨 color picker
+
+          - label : "dummy"
+          - name : "dummy"
