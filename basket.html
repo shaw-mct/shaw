@@ -1,0 +1,148 @@
+---
+title: سلة المشتريات
+---
+
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+{% include head.html %}
+
+<body class="product-page">
+
+  {% include navbar.html %}
+
+  <main class="container my-5">
+    <h2 class="mb-4">🛒 سلة المشتريات</h2>
+
+    <p  style="
+    background-color: #fff3cd; 
+    border: 1px solid #ffeeba; 
+    padding: 15px; 
+    border-radius: 8px; 
+    color: #856404; 
+    font-weight: 500;
+    line-height: 1.5;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+" >ملاحظة : عند الضغط على زر الشراء سيتم تحويلك الى الواتساب لتتم عملية الشراء الرجاء تحويل المبلغ المالي الى الحساب رقم " 12033432345" و ارسل صورة تاكيد على تحويل المبلغ الى الواتساب حيث انه لن يتم تاكيد طلب قبل ارسال اثبات تحويل المبلغ المالي المطلوب</p>
+
+    <div class="row">
+      <!-- Products Column (Left) -->
+      <div class="col-md-8" id="basket-items">
+        <!-- Basket items will render here -->
+      </div>
+
+      <!-- Customer Info Column (Right) -->
+      <div class="col-md-4">
+        <div class="card p-3 mb-3">
+          <h5>معلومات العميل</h5>
+          <div class="form-group mb-3">
+            <label for="customer-name">الاسم:</label>
+            <input type="text" id="customer-name" class="form-control" placeholder="ادخل اسمك">
+          </div>
+          <div class="form-group mb-3">
+            <label for="customer-location">العنوان / الموقع:</label>
+            <input type="text" id="customer-location" class="form-control" placeholder="ادخل عنوانك">
+          </div>
+          <h5 id="basket-total" class="mt-3">الإجمالي: 0 ريال</h5>
+          <button id="checkout-btn" class="btn btn-success mt-3 w-100">شراء الآن</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  {% include footer.html %}
+  {% include scripts.html %}
+
+  <script>
+    function renderBasket() {
+      let basket = JSON.parse(localStorage.getItem("basket")) || [];
+      const basketDiv = document.getElementById("basket-items");
+      const totalDiv = document.getElementById("basket-total");
+      basketDiv.innerHTML = "";
+
+      if (basket.length === 0) {
+        basketDiv.innerHTML = "<p>السلة فارغة</p>";
+        totalDiv.innerText = "الإجمالي: 0 ريال";
+        return;
+      }
+
+      let total = 0;
+      basket.forEach((item, index) => {
+        total += item.price * item.qty;
+
+       basketDiv.innerHTML += `
+  <div class="card mb-3 p-3">
+    <div class="d-flex align-items-center">
+      
+      <div class="basket-product-details">
+        <h5>${item.title}</h5>
+        <p>السعر: ${(item.price ? Number(item.price).toFixed(2) : "0.00")} ريال</p>
+
+        <p>المقاس: ${item.size}</p>
+        <p>
+          اللون: ${item.colorName} 
+          <span style="display:inline-block;width:15px;height:15px;border-radius:50%;border:1px solid #ccc;background-color:${item.color};margin-right:5px;"></span>
+        </p>
+        <p>الكمية: ${item.qty}</p>
+        
+          <button class="btn btn-danger btn-sm remove-item" data-index="${index}">إزالة</button>
+       
+      </div>
+    </div>
+  </div>
+`;
+      });
+
+      totalDiv.innerText = `الإجمالي: ${total.toFixed(2)} ريال`;
+
+      // Remove item functionality
+      document.querySelectorAll(".remove-item").forEach(button => {
+        button.addEventListener("click", () => {
+          const idx = parseInt(button.dataset.index);
+          basket.splice(idx, 1);
+          localStorage.setItem("basket", JSON.stringify(basket));
+          renderBasket();
+        });
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderBasket();
+
+      document.getElementById("checkout-btn").addEventListener("click", () => {
+        const basket = JSON.parse(localStorage.getItem("basket")) || [];
+        if (basket.length === 0) {
+          alert("السلة فارغة");
+          return;
+        }
+
+        const name = document.getElementById("customer-name").value.trim();
+        const location = document.getElementById("customer-location").value.trim();
+
+        if (!name || !location) {
+          alert("الرجاء إدخال الاسم والعنوان");
+          return;
+        }
+
+        let message = `طلب من: ${name}\nالموقع: ${location}\n\nتفاصيل الطلب:\n`;
+        let total = 0;
+        basket.forEach(item => {
+          message += `- ${item.title} x${item.qty}\n`;
+          message += `  Size: ${item.size}\n`;
+          message += `  Color: ${item.colorName}\n`;
+          total += item.price * item.qty;
+        });
+        message += `\nالإجمالي: ${total.toFixed(2)} ريال`;
+
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappNumber = "960790000"; 
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+        window.open(whatsappURL, "_blank");
+
+        localStorage.removeItem("basket");
+        renderBasket();
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+backend:
+  name: github
+  repo: Bassel-Mohammed/shaw       # Your GitHub repo
+  branch: main
+  base_url: https://cms-oauth-proxy-two.vercel.app
+
+# 📸 Where images are saved
+media_folder: "img"         # folder in the repo
+public_folder: "/img"       # public URL path
+
+collections:
+  - name: "products"
+    label: "Products"
+    folder: "_products"      # folder where product markdown files are stored
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "product" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Price", name: "price", widget: "number", value_type: "float" }
+      - { label: "Main Image", name: "image", widget: "image" }
+      - label: "Gallery Images"
+        name: "images"
+        widget: "list"
+        field: { label: "Image", name: "image", widget: "image" }
+      - { label: "Description", name: "description", widget: "text" }
+      - label: "Sizes"
+        name: "sizes"
+        widget: "list"
+        field: { label: "Size", name: "size", widget: "string" }
+      - label: "Colors"
+        name: "colors"
+        widget: "list"
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Code", name: "code", widget: "color" }   # 🎨 color picker

@@ -1,0 +1,20 @@
+title:              عباءات تليق بذوقكِ
+description:           توصيل لجميع دول العالم
+author:             SHAW
+url:                "https://shaw-mct.github.io"
+baseurl:            "/shaw"  
+
+# Social Profiles
+instagram_username:  shaw.mct
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Products collection
+collections:
+  products:
+    output: true
+    permalink: /products/:title/
