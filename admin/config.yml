@@ -2,9 +2,7 @@ backend:
   name: github
   repo: shaw-mct/shaw       # Your GitHub repo
   branch: main
-  base_url: https://shaw-shaw-mcts-projects.vercel.app/
-
-  auth_scope: repo
+  base_url: https://cms-auth-shaw.vercel.app
 
 # 📸 Where images are saved
 media_folder: "img"         # folder in the repo
