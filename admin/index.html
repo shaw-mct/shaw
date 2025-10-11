@@ -14,28 +14,34 @@
 
 
 
-<style>
-/* Ensure the color picker is fully visible */
-.nc-colorControl {
-  z-index: 1000 !important; /* Bring picker above other elements */
-}
-
-.nc-widget {
-  overflow: visible !important; /* Allow popup to expand */
-}
-
-/* Optional: adjust width of root container */
-#nc-root {
-  width: 100% !important;
-  max-width: none !important;
-}
-</style>
-
-
 
   </head>
   <body>
     <!-- Include the script that builds the page and powers Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+
+
+
+
+<script>
+  // Register custom styles for the CMS editor
+  CMS.registerPreviewStyle(`
+    /* Make sure the color picker isn't clipped */
+    .nc-colorControl {
+      z-index: 2000 !important;
+    }
+
+    .nc-widget {
+      overflow: visible !important;
+    }
+
+    /* Ensure lists of objects (like colors) have enough space */
+    .nc-objectControl {
+      overflow: visible !important;
+    }
+  `, { raw: true });
+</script>
+
   </body>
 </html>
