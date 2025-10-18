@@ -13,16 +13,24 @@ title: سلة المشتريات
   <main class="container my-5">
     <h2 class="mb-4">🛒 سلة المشتريات</h2>
 
-    <p  style="
-    background-color: #fff3cd; 
-    border: 1px solid #ffeeba; 
-    padding: 15px; 
-    border-radius: 8px; 
-    color: #856404; 
+    <div style="
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    padding: 15px;
+    border-radius: 8px;
+    color: #856404;
     font-weight: 500;
     line-height: 1.5;
     box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
-" >ملاحظة : عند الضغط على زر الشراء سيتم تحويلك الى الواتساب لتتم عملية الشراء الرجاء تحويل المبلغ المالي الى الحساب رقم " 12033432345" و ارسل صورة تاكيد على تحويل المبلغ الى الواتساب حيث انه لن يتم تاكيد طلب قبل ارسال اثبات تحويل المبلغ المالي المطلوب</p>
+    margin-bottom: 20px;
+">
+  <p>ملاحظة : عند الضغط على زر الشراء سيتم تحويلك الى الواتساب لتتم عملية الشراء الرجاء تحويل المبلغ المالي و ارسل صورة تاكيد على تحويل المبلغ الى الواتساب حيث انه لن يتم تاكيد طلبك قبل ارسال اثبات تحويل المبلغ المالي المطلوب</p>
+
+  <p><strong>معلومات الحساب</strong></p>
+  <p>رقم حساب التحويل السريع : 94959508</p>
+  <p>اسم الحساب: shahad Nabeel</p>
+  <p>بنك ميثاق</p>
+</div>
 
     <div class="row">
       <!-- Products Column (Left) -->
@@ -134,7 +142,7 @@ title: سلة المشتريات
         message += `\nالإجمالي: ${total.toFixed(2)} ريال`;
 
         const encodedMessage = encodeURIComponent(message);
-        const whatsappNumber = "960790000"; 
+        const whatsappNumber = "96894959508"; 
         const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
         window.open(whatsappURL, "_blank");

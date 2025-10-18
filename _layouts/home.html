@@ -37,10 +37,10 @@ layout: default
 
 
 <div class="center">
-  <h1 class="center-title">احدث العبائات</h1>
+  <h1 class="center-title">احدث العباءات</h1>
   <div class="wrapper">
     <div class="inner">
-      {% for product in site.products %}
+      {% for product in site.products limit:6 %}
       <div class="card">
         {% if product.image %}
           <img src="{{ product.image | relative_url }}" alt="{{ product.title }}">
