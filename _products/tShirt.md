@@ -1,37 +1,22 @@
 ---
 layout: product
-title: "عباءة لون اسود"
-price: 12
-image: "/img/pr6.jpg"
-
+title: S22
+price: 29
+image: /img/pr6.jpg
 images:
-  - "/img/pr1.jpg"
-  - "/img/pr2.jpg"
-  - "/img/pr3.jpg"
-description: "عباءة سوداء بقماس فاخر تناسب جميع المناسبات"
-
-
-
+  - /img/img_1161.jpeg
+description: عباءة سوداء بقماس فاخر تناسب جميع المناسبات
 sizes:
+  - "49"
   - "50"
+  - "51"
   - "52"
+  - "53"
   - "54"
+  - "55"
   - "56"
+  - "57"
   - "58"
-  
-
-colors:
-  - name: أسود
-    code: "#000000"
-  - name: رمادي
-    code: "#808080"
-  - name: بيج
-    code: "#f5f5dc"
-
-
-
-
-
+  - "59"
+colors: []
 ---
-
-
