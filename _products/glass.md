@@ -18,5 +18,7 @@ sizes:
   - "57"
   - "58"
   - "59"
-colors: []
+colors:
+  - name: بني
+    code: "#9b5757"
 ---
