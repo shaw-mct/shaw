@@ -1,30 +1,23 @@
 ---
 layout: product
-title: "عباءة سوداء بنقش ابيض"
-price: 5
-
-image: "/img/pr1.jpg"
-
-images:
-  - "/img/pr1.jpg"
-  - "/img/pr2.jpg"
-  - "/img/pr3.jpg"
-description: "عباءة بقماس حرير ناعم لجميع المناسبات"
-
+title: S7
+price: 26
+image: /img/pr1.jpg
+images: []
+description: "-"
 sizes:
+  - "49"
   - "50"
+  - "51"
   - "52"
+  - "53"
   - "54"
+  - "55"
   - "56"
+  - "57"
   - "58"
-  
-
+  - "59"
 colors:
-  - name: أسود
-    code: "#000000"
-  - name: رمادي
-    code: "#808080"
-  - name: بيج
-    code: "#f5f5dc"
-
+  - name: اسود
+    code: "#181818"
 ---
