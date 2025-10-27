@@ -1,35 +1,24 @@
 ---
 layout: product
-title: "عباءة وردية"
-price: 10
-image: "/img/pr2.jpg"
-
+title: S20
+price: 26
+image: /img/pr2.jpg
 images:
-  - "/img/pr1.jpg"
-  - "/img/pr2.jpg"
-  - "/img/pr3.jpg"
-description: "عباءة وردية بنقش مميز لجميع المناسبات"
-
-
+  - /img/img_9983.jpeg
+description: عباءة وردية بنقش مميز لجميع المناسبات
 sizes:
+  - "49"
   - "50"
+  - "51"
   - "52"
+  - "53"
   - "54"
+  - "55"
   - "56"
+  - "57"
   - "58"
-  
-
+  - "59"
 colors:
-  - name: أسود
-    code: "#000000"
-  - name: رمادي
-    code: "#808080"
-  - name: بيج
-    code: "#f5f5dc"
-
-
-
-
+  - name: بني
+    code: "#9b5757"
 ---
-
-

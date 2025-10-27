@@ -1,35 +1,29 @@
 ---
 layout: product
-title: "عباءة وردية"
-price: 15
-image: "/img/pr3.jpg"
-
-images:
-  - "/img/pr1.jpg"
-  - "/img/pr2.jpg"
-  - "/img/pr3.jpg"
-description: "عباءة وردية من قماش حريري ناعم مناسبة لجميع المناسبات"
-
-
+title: S18
+price: 27
+image: /img/pr3.jpg
+images: []
+description: "نوع الخام: ندى كوري"
 sizes:
+  - "49"
   - "50"
+  - "51"
   - "52"
+  - "53"
   - "54"
+  - "55"
   - "56"
+  - "57"
   - "58"
-  
-
+  - "59"
 colors:
-  - name: أسود
-    code: "#000000"
-  - name: رمادي
-    code: "#808080"
-  - name: بيج
-    code: "#f5f5dc"
-
-
-
-
-
+  - name: الوردي
+    code: "#e869be"
+  - name: أزرق فاتح
+    code: "#83d7ef"
+  - name: ابيض
+    code: "#fdf6f6"
+  - name: اصفر فاتح
+    code: "#f7f1a3"
 ---
-
