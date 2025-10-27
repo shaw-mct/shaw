@@ -1,16 +1,33 @@
 // Styling for the masthead
-// @media (max-width: 768px) {
-//   header.masthead {
+@media (max-width: 768px) {
+  header.masthead {
 
- 
+    background-size: cover !important;   /* keeps same proportions and fills area */
+    background-position: center center !important; /* centers image */
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+    height: auto !important;             /* allows flexible scaling */
+    min-height: 400px;   
    
 
       
 
 
     
-//   }
-// }
+  }
+
+
+
+   
+
+  header.masthead .page-heading h1 {
+    font-size: 36px !important; /* readable on mobile */
+  }
+
+  header.masthead .page-heading .subheading {
+    font-size: 18px !important;
+  }
+}
 
 
 
@@ -53,7 +70,7 @@ header.masthead {
 
         @media only screen and (max-width: 768px) {
             padding: 200px 0;
-            margin-top: 60px;
+            margin-top: 0px;
             
         }
     }
