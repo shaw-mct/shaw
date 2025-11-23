@@ -3,7 +3,8 @@ layout: product
 title: S7
 price: 26
 image: /img/pr1.jpg
-images: []
+images:
+  - /img/021ed4d1-f458-4c8f-acd4-1496b1b4130e.jpeg
 description: "-"
 sizes:
   - "49"
